@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ControlField = () => {
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
   const handelSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
+    // console.log("submitted");
+    if (password.length < 6) {
+      setError("password needed 6 carecter ");
+    } else {
+      setError("");
+    }
   };
 
   const handelChange = (e) => {
     console.log(e.target.value);
+    setPassword(e.target.value);
+
+    // if (password.length < 6) {
+    //   setError("password must be 6 carecter");
+    // } else {
+    //   setError("");
+    // }
   };
 
   return (
@@ -24,6 +39,9 @@ const ControlField = () => {
         <br />
         <input type="submit" value="submit" />
       </form>
+      <p style={{ color: "red" }}>
+        <small>{error}</small>
+      </p>
     </div>
   );
 };
