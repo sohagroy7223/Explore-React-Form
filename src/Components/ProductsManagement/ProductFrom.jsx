@@ -3,11 +3,20 @@ import React from "react";
 const ProductFrom = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
+
     const name = e.target.name.value;
     const price = e.target.price.value;
     const quantity = e.target.quantity.value;
     console.log(name, price, quantity);
+
+    const nweProduct = {
+      name,
+      price,
+      quantity,
+    };
+    console.log(nweProduct);
   };
+
   return (
     <div>
       <form onSubmit={handelSubmit}>

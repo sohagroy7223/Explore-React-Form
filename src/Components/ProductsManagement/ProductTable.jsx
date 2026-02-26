@@ -1,7 +1,11 @@
 import React from "react";
 
 const ProductTable = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h3>hello</h3>
+    </div>
+  );
 };
 
 export default ProductTable;
