@@ -18,11 +18,11 @@ const ControlField = () => {
     console.log(e.target.value);
     setPassword(e.target.value);
 
-    // if (password.length < 6) {
-    //   setError("password must be 6 carecter");
-    // } else {
-    //   setError("");
-    // }
+    if (password.length < 6) {
+      setError("password must be 8 #?@A1 required carecter");
+    } else {
+      setError("");
+    }
   };
 
   return (
