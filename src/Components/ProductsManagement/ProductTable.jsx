@@ -13,7 +13,7 @@ const ProductTable = ({ products }) => {
             <th>name</th>
             <th>price</th>
             <th>quantity</th>
-            <th>update</th>
+            <th>actions</th>
           </tr>
         </thead>
         <tbody>
