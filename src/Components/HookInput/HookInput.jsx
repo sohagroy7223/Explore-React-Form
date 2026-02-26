@@ -5,14 +5,14 @@ const HookInput = () => {
   const [name, changeName] = useInputFile("");
   const [email, changeEmail] = useInputFile("");
   const [password, changePassword] = useInputFile("");
-  const handelSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log(name, email, password);
   };
   return (
     <div>
-      <form onSubmit={handelSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeName} placeholder="your name" />
         <br />
         <input
