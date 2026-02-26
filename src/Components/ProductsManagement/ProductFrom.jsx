@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductFrom = () => {
+const ProductFrom = ({ handelAddProduct }) => {
   const handelSubmit = (e) => {
     e.preventDefault();
 
@@ -14,7 +14,8 @@ const ProductFrom = () => {
       price,
       quantity,
     };
-    console.log(nweProduct);
+    // console.log(nweProduct);
+    handelAddProduct(nweProduct);
   };
 
   return (
